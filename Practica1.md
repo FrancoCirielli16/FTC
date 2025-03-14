@@ -55,35 +55,56 @@ Dado el alfabeto Ʃ = {0, 1}:
 L = {'',0,1,00,01,11,10}
 
 
-2. **Sea el lenguaje L = {0^n1^n | n ≥ 0}. Obtener los lenguajes Ʃ*, Ʃ* ⋃ L y L^C respecto de Ʃ*.**
+2. **Sea el lenguaje L = {0^n1^n | n ≥ 0}. Obtener los lenguajes Ʃ* ⋂ L, Ʃ* ⋃ L y L^C respecto de Ʃ*.**
 
 L = {0^n1^n | n ≥ 0}
- 
-Ʃ* = L
 
-Ʃ* ⋂ L
+Ʃ* ⋂ L = L
 
 Ʃ* ⋃ L = Ʃ*
 
 L^C = Σ∗−L
 
-
-
-
 # Ejercicio 3
 
 En clase se mostró una MT no determinística (MTN) que acepta las cadenas de la forma ha^n o hb^n, con n ≥ 0. **Construir (describir la función de transición) una MT determinística (MTD) equivalente.**
+
+MTN: no devuelve siempre el mismo resultado 
+MTD: devuelve siempre el mismo resultado
+
+
+
+| Estado | h         | a         | b         | B         |
+|--------|----------|----------|----------|----------|
+| q0     | qh, h, R | x        | x        | x        |
+| qh     | x        | qa, a, R | qb, b, R | x        |
+| qa     | x        | qa, a, R | x        | qA, B, S |
+| qb     | x        | x        | qb, b, R | qA, B, S |
+
+---
 
 
 
 
 # Ejercicio 4
 
-**Describir la idea general de una MT con varias cintas que acepte, de la manera más eficiente posible (menor cantidad de pasos), el lenguaje L = {a^nb^nc^n | n ≥ 0}.**
+**Describir la idea general de una MT con varias cintas que acepte, de la manera más eficiente posible (menor cantidad de pasos), el lenguaje L = {a^n b^n c^n | n ≥ 0}.**
+
+
+|----|---------|---------|----------|--------|
+|    |   a     |    b            |        c                |    B   | 
+| q0 | q1,a,R  |    q2,b,R     |     q3,c,R                |    x   |
+| q1 |   x     |  qa,a,R |  qb,b,R  |    x   |
+| q2 |   x     |  qa,a,R |     x    | qA,B,S |
+| q3 |   x     |   x     |  qb,b,R  | qA,B,S |
+
+
 
 # Ejercicio 5
 
 **Explicar cómo una MT sin el movimiento S (el no movimiento) puede simular (ejecutar) otra que sí lo tiene.**
+
+Se mueve de forma intermitente de derecha a izquiera hasta que se tope con un simbolo X que represente ejecutar pasando la maquina al estado siguiente.
 
 # Ejercicio 6
 
@@ -96,3 +117,56 @@ En clase se construyó una MT con 2 cintas que acepta L = {w | w ∈ {a, b}* y w
 # Ejercicio 8
 
 **Construir una MT que genere todas las cadenas de la forma a^nb^n, con n ≥ 1. Ayuda: se puede considerar la idea de solución propuesta en clase.**
+
+
+
+### **Ejercicio 3 - MT Determinística (MTD)**
+
+
+
+### **Ejercicio 4 - MT con Múltiples Cintas**
+
+#### **Idea general:**
+La MT utilizará tres cintas para mejorar la eficiencia en la aceptación del lenguaje \( L = \{ a^n b^n c^n | n \geq 0 \} \):
+1. **Cinta 1:** Contendrá la cadena de entrada.
+2. **Cinta 2:** Contará las ‘a’, copiándolas mientras avanza.
+3. **Cinta 3:** Verificará que el número de ‘b’ y ‘c’ sea igual al número de ‘a’ copiado en la cinta 2.
+
+#### **Función de transición**
+
+| Estado | a         | b         | c         | B         |
+|--------|----------|----------|----------|----------|
+| q0     | q1, a, R | q2, b, R | q3, c, R | x        |
+| q1     | qa, a, R | qb, b, R | x        | x        |
+| q2     | x        | qa, a, R | x        | qA, B, S |
+| q3     | x        | x        | qb, b, R | qA, B, S |
+
+---
+
+### **Ejercicio 5 - Simulación de una MT sin el movimiento 'S'**
+Una MT sin el movimiento 'S' puede simular una que sí lo tiene moviéndose de manera intermitente a la derecha e izquierda hasta alcanzar un símbolo especial que indique detenerse.
+- En lugar de quedarse en el mismo lugar (S), la máquina puede moverse a la derecha, marcar la celda y luego regresar a la izquierda para continuar con la ejecución.
+
+---
+
+### **Ejercicio 6 - MT de Palíndromos con 1 Cinta**
+**Idea general:**
+- Reemplazar el primer y último símbolo con una marca especial.
+- Moverse hacia la derecha y luego hacia la izquierda, verificando la coincidencia.
+- Repetir hasta que se procesen todos los caracteres o haya una discrepancia.
+
+---
+
+### **Ejercicio 7 - MT para la Resta de Dos Números**
+**Idea general:**
+- Los números se representan en forma unaria (ej. 3 sería "111").
+- La MT eliminará simultáneamente un "1" de cada número hasta que solo quede el resultado o se alcance 0.
+
+---
+
+### **Ejercicio 8 - MT Generadora de Cadenas de la Forma \( a^n b^n \)**
+**Idea general:**
+- Inicia con una única ‘a’.
+- Duplica la cantidad de ‘a’ y genera un ‘b’ correspondiente.
+- Repite el proceso para todas las combinaciones posibles.
+
