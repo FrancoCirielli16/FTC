@@ -42,16 +42,40 @@ Si tenemos la fórmula: φ=(A∨¬B)∧(¬A∨B)
 6. **¿Cuándo dos MT son equivalentes? ¿Y cuándo dos modelos de MT son equivalentes?**
 
 
+
+
 # Ejercicio 2
 
 Dado el alfabeto Ʃ = {0, 1}:
 
 1. **Obtener el conjunto Ʃ* y el lenguaje incluido en Ʃ* con cadenas de a lo sumo 2 símbolos.**
-2. **Sea el lenguaje L = {0^n1^n | n ≥ 0}. Obtener los lenguajes Ʃ* ⋂ L, Ʃ* ⋃ L y L^C respecto de Ʃ*.**
+
+
+Ʃ* = (0^n 1^m | n ≥ 0 m ≥ 0)
+L = {'',0,1,00,01,11,10}
+
+
+2. **Sea el lenguaje L = {0^n1^n | n ≥ 0}. Obtener los lenguajes Ʃ*, Ʃ* ⋃ L y L^C respecto de Ʃ*.**
+
+L = {0^n1^n | n ≥ 0}
+ 
+Ʃ* = L
+
+Ʃ* ⋂ L
+
+Ʃ* ⋃ L = Ʃ*
+
+L^C = Σ∗−L
+
+
+
 
 # Ejercicio 3
 
 En clase se mostró una MT no determinística (MTN) que acepta las cadenas de la forma ha^n o hb^n, con n ≥ 0. **Construir (describir la función de transición) una MT determinística (MTD) equivalente.**
+
+
+
 
 # Ejercicio 4
 
