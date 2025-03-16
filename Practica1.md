@@ -199,7 +199,10 @@ q_A (Aceptación):
 q_R (Rechazo):
 
 
+
 Símbolos: a, b, #, B.
+
+###
 
 Transiciones:
 
@@ -248,7 +251,20 @@ Transiciones:
 
 **Construir una MT que calcule la resta de dos números. Ayuda: se puede considerar la idea de solución propuesta en clase.**
 
-L = (M - N, donde M ≥ N) si M < N, la MT rechaza.
+![Diagrama de la máquina de estados](Practicas/P1/image%20(1).png)
+
+
+| Estado | 1         | -         | #         | B         |
+|--------|-----------|-----------|-----------|-----------|
+| q0     | q0.1.R    | q1.-,R    | q0.#,R    | q1.1.R    |
+| q1     | q2.#,L    |           | q1.#,R    | q5.B,L    |
+| q2     | q0.#,R    | q2.-,L    | q2.#,L    | q3.B,R    |
+| q3     | q4.1,L    | q3.-,R    | q3.#,R    |           |
+| q4     |           |           | q4.1,S    |           |
+| q5     |           | q4.#,S    | q5.#,L    |           |
+
+El separador es el -
+Los estados en blancos representan los rechazados 
 
 
 # Ejercicio 8
