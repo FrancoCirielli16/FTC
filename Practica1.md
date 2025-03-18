@@ -272,3 +272,10 @@ Los estados en blancos representan los rechazados
 **Construir una MT que genere todas las cadenas de la forma a^nb^n, con n ≥ 1. Ayuda: se puede considerar la idea de solución propuesta en clase.**
 
 
+![Diagrama de la máquina de estados](Practicas/P1/image.png)
+
+| Estado |          B,B         |          B,#          | 
+|--------|----------------------|-----------------------|
+| q0     | q1,(B,B,S),(B,#,S)   |                       |
+| q1     | q2,(B,B,S),(B,B,L)   | q2,(B,a,R),(#,#,R)    |
+| q2     | q2,(B,b,R),(#,#,L)   | q0,(B,",",R),(B,B,S)    |
