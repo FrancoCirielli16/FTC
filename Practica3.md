@@ -85,11 +85,20 @@ casos, las MT mencionadas tienen una sola cinta):
 a. Probar que se puede decidir si una MT M, a partir de la cadena vacía λ, escribe alguna vez 
 un símbolo no blanco. Ayuda: ¿Cuántos pasos puede hacer M antes de entrar en un loop?  
 
+Esto se puede realizar encontrando una cota máxima de pasos, que será la cantidad de estados (el cual es un número finito) al cual llamaremos Q.
+Si nuestra MT M realiza Q pasos y vuelve al inicio del estado sin escribir algo distinto que blanco entonces la maquina inicio un bucle infinito.
+
 b. Probar que se puede decidir si una MT M que sólo se mueve a la derecha,  a partir de una 
 cadena w, para, Ayuda: ¿Cuántos pasos puede hacer M antes de entrar en un loop?
 
+
+
+
 c. Probar que se puede decidir si dada una MT M, existe una cadena w a partir de la cual M 
 para en a lo sumo 10 pasos. Ayuda: ¿Hasta qué tamaño de cadenas hay que chequear? 
+
+
+
 d. ¿Se puede decidir si dada una MT M, existe una cadena w de a lo sumo 10 símbolos a partir 
 de la cual M para? Justificar la respuesta.  
 

@@ -31,6 +31,8 @@ Repositorio con prácticas resueltas, material teórico y recursos para la asign
 | [Teoría 1](Teorias/) | Introducción a MT y Computabilidad | [📥](Teorias/FTC-2025---Clase-1.pdf) |
 | [Teoría 2](Teorias/) | Introducción a MT y Computabilidad | [📥](Teorias/FTC-2025---Clase-2.pdf) |
 | [Teoría 3](Teorias/) | Introducción a MT y Computabilidad | [📥](Teorias/FTC-2025---Clase-3.pdf) |
+| [Teoría 4](Teorias/) | Introducción a MT y Computabilidad | [📥](Teorias/FTC-2025---Clase-3.pdf) |
+| [Teoría 5](Teorias/) | Introducción a MT y Computabilidad | [📥](Teorias/FTC-2025---Clase-3.pdf) |
 
 
 
@@ -39,7 +41,9 @@ Repositorio con prácticas resueltas, material teórico y recursos para la asign
 |--------|-----------|--------|
 | [Práctica 1](Practicas/FTC-2025---Trabajo-1.pdf/) | Máquinas de Turing, MT Universal | ✅ |
 | [Práctica 2](Practicas/FTC-2025---Trabajo-2.pdf/) | La jerarquía de la Computabilidad | ✅ |
-| [Práctica 3](Practicas/FTC-2025---Trabajo-3.pdf/) | Indecibilidad | ✅ |
+| [Práctica 3](Practicas/FTC-2025---Trabajo-3.pdf/) | Indecibilidad | 🟨 |
+| [Práctica 4](Practicas/FTC-2025---Trabajo-4.pdf/) | Las reducciones | 🟨 |
+| [Práctica 5](Practicas/FTC-2025---Trabajo-5.pdf/) | Tiempo polinomial y no polinomial | 🟨 |
 
 
 
@@ -47,8 +51,9 @@ Repositorio con prácticas resueltas, material teórico y recursos para la asign
 | Número | Contenido | Estado |
 |--------|-----------|--------|
 | [Práctica 1](Practica1.md) | Teoria/Construir MT | ✅ |
-| [Práctica 2](Practica2.md) | La jerarquía de la Computabilidad | 🟨 |
+| [Práctica 2](Practica2.md) | La jerarquía de la Computabilidad | ✅  |
 | [Práctica 3](Practica3.md) | Indecibilidad | 🟨 |
+| [Práctica 4](Practica4.md) | Las reducciones | 🟨 |
 
 
 ---
